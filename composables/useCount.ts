@@ -1,16 +1,18 @@
+import { storeToRefs } from "pinia";
+import { useCounterStore } from "../stores/count";
+import { useCoberturasStore } from "../stores/coberturas";
+
 export const useCount = () => {
+  const countStore = useCounterStore();
+  const { count } = storeToRefs(countStore);
 
-    const count = ref<number>(0)
+  const increment = () => {
+    countStore.increment();
+    console.log(countStore.count);
+  };
 
-
-    const increment = () => {
-        count.value++
-    }
-
-
-    return {
-        count,
-        increment
-    }
-
-}
+  return {
+    count,
+    increment,
+  };
+};
