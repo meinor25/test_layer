@@ -1,7 +1,7 @@
 {
   "name": "nuxt-layer-irod-test",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev .playground",
